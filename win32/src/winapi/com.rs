@@ -1,6 +1,6 @@
 #[allow(non_snake_case)]
 #[repr(C)]
-#[derive(PartialEq)]
+#[derive(PartialEq, Eq)]
 pub struct GUID {
     pub Data1: u32,
     pub Data2: u16,
