@@ -117,7 +117,7 @@ pub fn GetModuleHandleA(machine: &mut Machine, lpModuleName: Option<&str>) -> HM
         return *hmodule;
     }
 
-    set_last_error(machine, ERROR_FILE_NOT_FOUND);
+    set_last_error(machine, ERROR_MOD_NOT_FOUND);
     return HMODULE::null();
 }
 
