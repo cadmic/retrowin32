@@ -93,7 +93,7 @@ impl MachineX<Emulator> {
         let fn_addr = Self::jump_to_entry_point as *const fn() as u64;
         assert!(mem_3gb_range.contains(&fn_addr), "fn_addr ({fn_addr:x}) not in 3-4gb range");
 
-        log::info!("entry point at {entry_point:x}, about to jump");
+        log::debug!("entry point at {entry_point:x}, about to jump");
         // std::io::stdin().read_line(&mut String::new()).unwrap();
 
         let pin = std::pin::pin!(self.call_x86(entry_point, vec![]));
