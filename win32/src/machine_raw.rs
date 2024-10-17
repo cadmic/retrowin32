@@ -13,7 +13,7 @@ pub struct RawMem {}
 
 impl RawMem {
     pub fn mem(&self) -> Mem {
-        Mem::new(std::ptr::null_mut(), (1 << 30) as *mut u8)
+        Mem::new(std::ptr::null_mut(), (2 << 30) as *mut u8)
     }
     pub fn len(&self) -> u32 {
         0xFFFF_FFFF
